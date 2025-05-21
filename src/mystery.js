@@ -9,10 +9,23 @@
 // };
 
 // leap year
-export const mystery2 = (num) => {
-  if (num % 400 === 0) {
+// export const mystery2 = (num) => {
+//   if (num % 400 === 0) {
+//     return true;
+//   } else if (num % 4 === 0 && num % 100 !== 0) {
+//     return true;
+//   }
+//   return false;
+// };
+
+export const mystery2 = (year) => {
+  if (year % 400 === 0) {
     return true;
-  } else if (num % 4 === 0 && num % 100 !== 0) {
+  }
+  if (year % 100 === 0) {
+    return false;
+  }
+  if (year % 4 === 0) {
     return true;
   }
   return false;
